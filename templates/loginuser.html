@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<body class="text-center">
+
+<div class="container">
+
+<form class="form-signin" style="color:black"  method="post">
+
+  <div class="jumbotron">
+
+  {{ form.hidden_tag() }} <!-- cybersecurity  -->
+
+  <h1 class="h3 mb-3 font-weight-normal">
+
+    Login
+
+  </h1>
+  <br>
+
+  {{ form.username.label }}   <!-- just the label for username -->
+  {{ form.username(class="form-control") }} <!-- username input -->
+
+
+  {{ form.password.label }}
+  {{ form.password(class="form-control") }}
+
+
+
+  <br>
+
+  <div class="checkbox mb-3"
+   <h5> Don't have an account click here to create one </h5>
+   <a class = "btn btn-sm btn-outline-success" href="{{ url_for('signup') }}"> Register </a>
+  </div>
+
+  {{ form.submit(class="btn btn-lg btn-block btn-success") }}
+
+   </div>
+
+</form>
+
+</div>
+
+</body>
+
+{% endblock %}

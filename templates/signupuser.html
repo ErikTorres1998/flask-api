@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<body class="text-center">
+
+<div class="container">
+
+<form class="form-register" style="color:black"  method="post">
+
+  <div class="jumbotron">
+
+  {{ form.hidden_tag() }} <!-- cybersecurity  -->
+
+  <h1 class="h3 mb-3 font-weight-normal">
+
+     Create your Account
+
+  </h1>
+  <br>
+
+  {{ form.username.label }}   <!-- just the label for username -->
+  {{ form.username(class="form-control") }} <!-- username input -->
+
+
+  {{ form.email_address.label }}
+  {{ form.email_address(class="form-control") }}
+
+  {{ form.password1.label }}
+  {{ form.password1(class="form-control") }}
+
+  {{ form.password2.label }}
+  {{ form.password2(class="form-control") }} <!-- form-control is like .as_p -->
+
+  <br>
+  {{form.submit(class="btn btn-lg btn-block btn-success") }}
+
+  </div>
+
+</form>
+
+</div>
+
+</body>
+
+
+{% endblock %}
